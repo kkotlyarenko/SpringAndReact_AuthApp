@@ -12,6 +12,12 @@ export const PageContainer = styled.div`
     padding: 16px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+    @media (max-width: 768px) {
+        max-width: 90%;
+        margin: 15px auto;
+        padding: 0;
+    }
 `;
 
 export const DashboardContainer = styled(BoxContainer)`
@@ -33,6 +39,7 @@ export const MenuButton = styled.button`
     border: none;
     font-size: 30px;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     svg {
         color: #333;
@@ -89,6 +96,7 @@ export const SubmitButton = styled.button`
     );
     cursor: pointer;
     transition: all 240ms ease-in-out;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &:hover {
         filter: brightness(1.1);

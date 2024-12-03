@@ -18,7 +18,7 @@ import {
     ChartContainer,
     TableContainer, PageContainer,
 } from "./dashboardStyles.tsx";
-import { FaBars } from "react-icons/fa";
+import {FiUser} from "react-icons/fi";
 import CanvasGraph from "../components/canvas/CanvasGraph.tsx";
 
 interface UserInfo{
@@ -276,7 +276,7 @@ const Dashboard: React.FC = () => {
         <PageContainer>
             <DashboardContainer>
                 <MenuButton onClick={toggleSidebar}>
-                    <FaBars />
+                    <FiUser />
                 </MenuButton>
                 <Sidebar
                     isOpen={isSidebarOpen}

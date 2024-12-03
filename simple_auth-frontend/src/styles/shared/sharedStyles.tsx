@@ -58,6 +58,7 @@ export const SubmitButton = styled.button`
     background: linear-gradient(
             58deg, rgba(243,172,18,1) 20%, rgba(241,196,15,1) 100%
     );
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &:hover {
         filter: brightness(1.03);
@@ -70,6 +71,7 @@ export const CloseButton = styled.button`
     font-size: 30px;
     align-self: flex-end;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 export const LineText = styled.p`

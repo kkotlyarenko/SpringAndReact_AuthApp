@@ -91,12 +91,18 @@ const backdropVariants = {
         borderRadius: "20%",
         transform: "rotate(60deg)",
     },
-    collapsed: {
+    signin: {
         width: "140%",
         height: "700px",
         borderRadius: "50%",
         transform: "rotate(60deg)",
     },
+    signup: {
+        width: "140%",
+        height: "700px",
+        borderRadius: "50%",
+        transform: "rotate(-60deg)",
+    }
 };
 
 const expandingTransition = {
@@ -143,8 +149,8 @@ export default function AccountBox() {
         <BoxContainer>
           <TopContainer>
             <BackDrop
-                initial={false}
-                animate={isExpanded ? "expanded" : "collapsed"}
+                initial={"expanded"}
+                animate={isExpanded ? "expanded" : active}
                 variants={backdropVariants}
                 transition={expandingTransition}
             />

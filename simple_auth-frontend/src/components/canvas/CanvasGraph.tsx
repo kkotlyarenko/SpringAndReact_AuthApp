@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import styled from "styled-components";
 
 interface Point {
     x: number;
@@ -12,6 +13,17 @@ interface CanvasGraphProps {
     points: Point[];
     onCanvasClick: (x: number, y: number) => void;
 }
+
+export const StyledCanvas = styled.canvas`
+    display: flex;
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 1px solid black;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const CanvasGraph: React.FC<CanvasGraphProps> = ({ rValue, points, onCanvasClick }) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -171,13 +183,7 @@ const CanvasGraph: React.FC<CanvasGraphProps> = ({ rValue, points, onCanvasClick
         drawGraph();
     }, [rValue, points]);
 
-    return (
-        <canvas
-            ref={canvasRef}
-            style={{ display:'flex', margin: "auto", width: '100%', maxWidth: '400px', height: 'auto', border: '1px solid black', cursor: 'pointer' }}
-            onClick={handleCanvasClick}
-        ></canvas>
-    );
+    return <StyledCanvas ref={canvasRef} onClick={handleCanvasClick} />
 };
 
 export default CanvasGraph;

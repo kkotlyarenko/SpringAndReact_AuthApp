@@ -33,6 +33,7 @@ const CloseButton = styled.button`
     font-size: 30px;
     align-self: flex-end;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const DeleteButton = styled(SubmitButton)`
@@ -40,6 +41,7 @@ const DeleteButton = styled(SubmitButton)`
     background: linear-gradient(
             58deg, rgba(235, 0, 0, 1) 20%, rgba(256, 0, 0, 1) 100%
     );
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     
     &:hover {
         background: linear-gradient(
